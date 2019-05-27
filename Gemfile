@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails',        '5.1.6'
+gem 'bootstrap-sass', '3.3.7'
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
 gem 'uglifier',     '3.2.0'
@@ -27,6 +28,9 @@ group :test do
   gem 'minitest-reporters',       '1.1.14'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'capybara', '~> 2.4.1'
+  gem 'poltergeist', '~> 1.5.1'
+  gem 'database_cleaner'
   gem 'guard',                    '2.13.0'
   gem 'guard-minitest',           '2.4.4'
 end
