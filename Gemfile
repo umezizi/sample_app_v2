@@ -29,7 +29,7 @@ group :test do
   gem 'minitest-reporters',       '1.1.14'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'capybara', '~> 2.4.1'
+  gem 'capybara'
   gem 'poltergeist', '~> 1.5.1'
   gem 'database_cleaner'
   gem 'guard',                    '2.13.0'
