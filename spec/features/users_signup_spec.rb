@@ -29,8 +29,5 @@ RSpec.feature "UsersSignups", type: :feature do
     user = User.find_by(email:"user@example.com")
     expect(current_path).to eq user_path(user)
     expect(page).to have_selector 'div.alert-success'
-
-    #expect(page).to have_selector 'div#error_explanation'
-    #expect(page).to have_selector 'div.alert'
   end
 end
