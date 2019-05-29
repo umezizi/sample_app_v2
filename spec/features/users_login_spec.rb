@@ -28,6 +28,8 @@ RSpec.feature "UsersLogins", type: :feature do
     expect(page).to     have_link 'Log out',  href: logout_path
     expect(page).to     have_link 'Profile', href: user_path(user)
     click_link "Log out"
+    #delete logout_path
+    #sign_out_as
     expect(current_path).to eq root_path
     expect(page).to     have_link 'Log in',  href: login_path
     expect(page).to_not have_link 'Log out',  href: logout_path
