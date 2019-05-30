@@ -6,6 +6,8 @@ FactoryBot.define do
     password_confirmation {"password"}
     # 有効化
     admin {true}
+    activated  {true}
+    activated_at {Time.zone.now}
   end
 
   factory :archer, class: User do
@@ -13,8 +15,8 @@ FactoryBot.define do
     email {"duchess@example.gov"}
     password {"password"}
     password_confirmation {"password"}
-    # 有効化
-    #activated true
+    activated  {true}
+    activated_at {Time.zone.now}
   end
 
   factory :lana, class: User do
@@ -22,8 +24,8 @@ FactoryBot.define do
     email {"hands@example.gov"}
     password {"password"}
     password_confirmation {"password"}
-    # 有効化
-    #activated true
+    activated  {true}
+    activated_at {Time.zone.now}
   end
 
   factory :malory, class: User do
@@ -31,8 +33,8 @@ FactoryBot.define do
     email {"boss@example.gov"}
     password {"password"}
     password_confirmation {"password"}
-    # 有効化
-    #activated true
+    activated  {true}
+    activated_at {Time.zone.now}
   end
 
 
@@ -42,8 +44,8 @@ FactoryBot.define do
       email {"user-#{n}@example.com"}
       password {"password"}
       password_confirmation {"password"}
-      # 有効化
-      #activated true
+      activated  {true}
+      activated_at {Time.zone.now}
     end
   end
   
