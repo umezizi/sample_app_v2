@@ -83,4 +83,16 @@ RSpec.describe User, type: :model do
     end
   end
 
+  # Micropost関連のテスト
+  describe "Micropost" do
+    # Userを消したときにMicropostも削除されることを確認する
+    it "associated microposts should be destroyed" do
+      user.save
+      user.microposts.create!(content: "Lorem ipsum")
+      expect {
+        user.destroy
+      }.to change(User, :count).by(-1)
+    end
+  end
+
 end
