@@ -85,5 +85,18 @@ RSpec.describe "UsersControllers", type: :request do
         expect(response).to redirect_to root_path
       end
     end
+
+    # フォロー/フォロワーページの認可をテストする
+    context "following / followers" do
+      # ログイン画面にリダイレクトすること
+      it "should redirect following when not logged in" do
+        get following_user_path(user)
+        expect(response).to redirect_to login_path
+      end
+      it "should redirect followers when not logged in" do
+        get followers_user_path(user)
+        expect(response).to redirect_to login_path
+      end
+    end
   end
 end

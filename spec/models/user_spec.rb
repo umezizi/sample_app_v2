@@ -95,4 +95,19 @@ RSpec.describe User, type: :model do
     end
   end
 
+  # フォロー関連のテスト
+  describe "Relationship" do
+    it "should follow and unfollow a user" do
+      user       = FactoryBot.create(:user)
+      other_user = FactoryBot.create(:archer) 
+      expect(false).to eq user.following?(other_user)
+      user.follow(other_user)
+      expect(true).to  eq user.following?(other_user)
+      expect(true).to  eq other_user.followers.include?(user)
+      user.unfollow(other_user)
+      expect(false).to eq user.following?(other_user)
+    end
+  end
+
+
 end
